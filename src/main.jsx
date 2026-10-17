@@ -1,7 +1,271 @@
-import React,{useMemo,useState}from'react';import{createRoot}from'react-dom/client';import'./style.css';
-const E=[
-[2,'GN o NI','🌲','LE__O',['GN','NI'],'GN','LEGNO'],[2,'GN o NI','🧽','SPU__A',['GN','NI'],'GN','SPUGNA'],[2,'GN o NI','🌲','PI__A',['GN','NI'],'GN','PIGNA'],[2,'GN o NI','🛁','BA__O',['GN','NI'],'GN','BAGNO'],[2,'GN o NI','🚓','CARABI__ERE',['GN','NI'],'NI','CARABINIERE'],[2,'GN o NI','🤝','COMPA__IA',['GN','NI'],'GN','COMPAGNIA'],
-[1,'Sillabe','🏠','CA__',['SA','ZA'],'SA','CASA'],[1,'Sillabe','🌙','LU__',['NA','MA'],'NA','LUNA'],[1,'Sillabe','🍎','ME__',['LA','RA'],'LA','MELA'],[1,'Lettera iniziale','🐟','__ESCE',['P','B'],'P','PESCE'],[1,'Lettera iniziale','☀️','__OLE',['S','F'],'S','SOLE'],[1,'Lettera iniziale','🐱','__ATTO',['G','C'],'G','GATTO']].map((x,i)=>({id:i+1,level:x[0],topic:x[1],icon:x[2],prompt:x[3],choices:x[4],answer:x[5],word:x[6]}));
-const shuffle=a=>[...a].sort(()=>Math.random()-.5);
-function App(){const[round,setRound]=useState(()=>shuffle(E)),[idx,setIdx]=useState(0),[score,setScore]=useState(0),[ans,setAns]=useState(null),[mistakes,setMistakes]=useState([]),[mode,setMode]=useState('mix');const list=useMemo(()=>mode==='mix'?round:round.filter(x=>x.level===+mode),[round,mode]);const cur=list[idx%list.length],done=idx>=list.length;const speak=t=>{if('speechSynthesis'in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='it-IT';speechSynthesis.speak(u)}};const choose=c=>{if(ans)return;const ok=c===cur.answer;setAns({c,ok});if(ok){setScore(s=>s+1);speak('Bravo! '+cur.word)}else{setMistakes(m=>[...m,cur]);speak('Quasi. La parola è '+cur.word)}};const reset=m=>{setRound(m&&mistakes.length?shuffle(mistakes):shuffle(E));setIdx(0);setScore(0);setAns(null);setMistakes([]);setMode('mix')};if(done||!cur)return <main><section className="card end"><div className="hero">🏆</div><h1>Finito!</h1><h2>{score} su {list.length}</h2>{mistakes.length>0&&<button className="yellow" onClick={()=>reset(true)}>🔁 Ripassa</button>}<button className="blue" onClick={()=>reset(false)}>🎮 Gioca ancora</button></section></main>;return <main><section className="wrap"><header><b>⭐ {score}</b><span>{idx+1}/{list.length}</span></header><nav>{[['mix','Misto'],['2','Seconda'],['1','Ripasso']].map(([v,l])=><button className={mode===v?'active':''} onClick={()=>{setMode(v);setIdx(0);setScore(0);setAns(null);setMistakes([])}}>{l}</button>)}</nav><article className="card"><div className="topic">{cur.topic}</div><div className="inside"><button className="picture" onClick={()=>speak(cur.word)}>{cur.icon}</button><div className="prompt">{cur.prompt}</div><small>Tocca la risposta</small><div className="choices">{cur.choices.map(c=><button className={ans?(c===cur.answer?'correct':c===ans.c?'wrong':'muted'):'choice'} onClick={()=>choose(c)}>{c}</button>)}</div>{ans&&<><div className={'feedback '+(ans.ok?'ok':'no')}>{ans.ok?'✅ Bravo!':'💡 Quasi!'}<strong>{cur.word}</strong></div><button className="blue" onClick={()=>{setAns(null);setIdx(i=>i+1)}}>Avanti ➜</button></>}</div></article></section></main>}
-createRoot(document.getElementById('root')).render(<App/>);
+import React, { useState } from "react";
+import { createRoot } from "react-dom/client";
+import { exercises } from "./exercises.js";
+import "./style.css";
+
+const QUESTIONS_PER_GAME = 10;
+
+
+// ========================================
+// Mischia casualmente un array
+// ========================================
+
+function shuffle(array) {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+
+// ========================================
+// Prepara una nuova partita
+// ========================================
+
+function createGame() {
+  return shuffle(exercises).slice(0, QUESTIONS_PER_GAME);
+}
+
+
+// ========================================
+// App principale
+// ========================================
+
+function App() {
+  const [game, setGame] = useState(() => createGame());
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [score, setScore] = useState(0);
+  const [finished, setFinished] = useState(false);
+
+  const currentExercise = game[currentIndex];
+
+  const answered = selectedAnswer !== null;
+  const isCorrect =
+    answered && selectedAnswer === currentExercise.answer;
+
+
+  // ========================================
+  // Gestisce la risposta
+  // ========================================
+
+  function handleAnswer(option) {
+    if (answered) return;
+
+    setSelectedAnswer(option);
+
+    if (option === currentExercise.answer) {
+      setScore((oldScore) => oldScore + 1);
+    }
+  }
+
+
+  // ========================================
+  // Passa alla domanda successiva
+  // ========================================
+
+  function handleNext() {
+    if (currentIndex === game.length - 1) {
+      setFinished(true);
+      return;
+    }
+
+    setCurrentIndex((oldIndex) => oldIndex + 1);
+    setSelectedAnswer(null);
+  }
+
+
+  // ========================================
+  // Inizia una nuova partita
+  // ========================================
+
+  function restartGame() {
+    setGame(createGame());
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setScore(0);
+    setFinished(false);
+  }
+
+
+  // ========================================
+  // Schermata finale
+  // ========================================
+
+  if (finished) {
+    return (
+      <main className="app">
+        <div className="card">
+
+          <div className="celebration">
+            🎉
+          </div>
+
+          <h1>Bravissimo!</h1>
+
+          <p className="final-text">
+            Hai completato tutti gli esercizi.
+          </p>
+
+          <div className="final-score">
+            {score} / {game.length}
+          </div>
+
+          <button
+            className="next-button"
+            onClick={restartGame}
+          >
+            Gioca ancora
+          </button>
+
+        </div>
+      </main>
+    );
+  }
+
+
+  // ========================================
+  // Schermata dell'esercizio
+  // ========================================
+
+  return (
+    <main className="app">
+
+      <div className="card">
+
+        <div className="top-bar">
+
+          <div className="progress-text">
+            {currentIndex + 1} / {game.length}
+          </div>
+
+          <div className="score-text">
+            ⭐ {score}
+          </div>
+
+        </div>
+
+
+        <div className="progress-bar">
+          <div
+            className="progress-fill"
+            style={{
+              width:
+                `${((currentIndex + 1) / game.length) * 100}%`
+            }}
+          />
+        </div>
+
+
+        <h1 className="title">
+          Parole in gioco
+        </h1>
+
+
+        <p className="instruction">
+          {currentExercise.type === "correctWord"
+            ? currentExercise.prompt
+            : "Completa la parola"}
+        </p>
+
+
+        {currentExercise.type === "complete" && (
+          <div className="word">
+            {currentExercise.prompt}
+          </div>
+        )}
+
+
+        <div className="options">
+
+          {currentExercise.options.map((option) => {
+
+            let buttonClass = "option-button";
+
+            if (answered) {
+
+              if (option === currentExercise.answer) {
+                buttonClass += " correct";
+              }
+
+              else if (option === selectedAnswer) {
+                buttonClass += " wrong";
+              }
+
+            }
+
+            return (
+              <button
+                key={option}
+                className={buttonClass}
+                onClick={() => handleAnswer(option)}
+                disabled={answered}
+              >
+                {option}
+              </button>
+            );
+          })}
+
+        </div>
+
+
+        {answered && (
+
+          <div className="feedback">
+
+            {isCorrect ? (
+              <>
+                <div className="feedback-icon">
+                  🎉
+                </div>
+
+                <div className="feedback-correct">
+                  Bravo!
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="feedback-icon">
+                  💪
+                </div>
+
+                <div className="feedback-wrong">
+                  Quasi!
+                </div>
+              </>
+            )}
+
+
+            <div className="correct-word">
+              {currentExercise.word}
+            </div>
+
+
+            <button
+              className="next-button"
+              onClick={handleNext}
+            >
+              {currentIndex === game.length - 1
+                ? "Vedi il risultato"
+                : "Avanti"}
+            </button>
+
+          </div>
+
+        )}
+
+      </div>
+
+    </main>
+  );
+}
+
+
+// ========================================
+// Avvio di React
+// ========================================
+
+createRoot(
+  document.getElementById("root")
+).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
