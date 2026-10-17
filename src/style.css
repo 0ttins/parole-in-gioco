@@ -1,1 +1,575 @@
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;color:#1e293b;background:linear-gradient(#e0f2fe,#fffbeb);min-height:100vh}button{font:inherit;border:0;cursor:pointer}main{min-height:100vh;padding:16px;display:grid;place-items:center}.wrap,.card{width:100%;max-width:440px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:18px}header span,nav button{background:#fff;border-radius:16px;padding:10px 14px;font-weight:700}nav{display:flex;gap:8px;margin-bottom:14px}nav button{flex:1;color:#475569}.active,.blue{background:#0284c7!important;color:#fff!important}.card{background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 14px 35px #0c4a6e22}.topic{background:#0ea5e9;color:#fff;text-align:center;padding:14px;font-size:20px;font-weight:900}.inside{text-align:center;padding:24px}.picture{background:none;font-size:80px;line-height:1}.prompt{font-size:40px;font-weight:900;letter-spacing:2px;margin-top:18px}.inside small{color:#64748b}.choices{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}.choices button{min-height:96px;border-radius:24px;font-size:32px;font-weight:900;box-shadow:0 5px 10px #0001}.choice,.yellow{background:#fcd34d}.correct{background:#10b981;color:white}.wrong{background:#fb7185;color:white}.muted{background:#e2e8f0;color:#64748b}.feedback{padding:14px;border-radius:20px;font-size:24px;font-weight:900;margin-bottom:14px}.feedback strong{display:block;font-size:30px}.ok{background:#d1fae5;color:#065f46}.no{background:#ffe4e6;color:#9f1239}.blue,.yellow{width:100%;padding:16px;border-radius:18px;font-size:21px;font-weight:900;margin-top:10px}.end{text-align:center;padding:28px}.hero{font-size:72px}.end h1{font-size:34px;margin:6px}.end h2{font-size:28px}
+/* ========================================
+   PAROLE IN GIOCO
+   style.css
+   ======================================== */
+
+
+/* ========================================
+   RESET E PAGINA
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8f5ff 0%,
+      #f7f3ff 50%,
+      #fff4df 100%
+    );
+
+  color: #24324a;
+}
+
+
+/* ========================================
+   CONTENITORE PRINCIPALE
+   ======================================== */
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+
+/* ========================================
+   SCHEDA DEL GIOCO
+   ======================================== */
+
+.card {
+  width: 100%;
+  max-width: 720px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 12px 35px rgba(44, 62, 100, 0.12);
+
+  text-align: center;
+}
+
+
+/* ========================================
+   BARRA SUPERIORE
+   ======================================== */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: #65738a;
+}
+
+.progress-text,
+.score-text {
+  min-width: 70px;
+}
+
+.progress-text {
+  text-align: left;
+}
+
+.score-text {
+  text-align: right;
+}
+
+
+/* ========================================
+   BARRA DI AVANZAMENTO
+   ======================================== */
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+
+  background: #edf1f7;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  margin-bottom: 28px;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #55b8ff,
+      #7067e8
+    );
+
+  border-radius: 999px;
+
+  transition: width 0.3s ease;
+}
+
+
+/* ========================================
+   TITOLO
+   ======================================== */
+
+.title,
+.card h1 {
+  margin: 0 0 16px;
+
+  color: #263552;
+
+  font-size: clamp(2rem, 6vw, 3rem);
+
+  line-height: 1.1;
+}
+
+
+/* ========================================
+   ISTRUZIONE
+   ======================================== */
+
+.instruction {
+  margin: 0 0 20px;
+
+  color: #647189;
+
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   PAROLA DA COMPLETARE
+   ======================================== */
+
+.word {
+  margin: 20px auto 28px;
+
+  padding: 18px 20px;
+
+  font-size: clamp(2.4rem, 10vw, 4.5rem);
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  letter-spacing: 0.04em;
+
+  color: #253653;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   CONTENITORE DELLE RISPOSTE
+   ======================================== */
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin: 12px auto 24px;
+
+  width: 100%;
+}
+
+
+/* ========================================
+   PULSANTI RISPOSTA
+   ======================================== */
+
+.option-button {
+  flex: 1 1 130px;
+
+  min-width: 110px;
+  max-width: 260px;
+
+  min-height: 72px;
+
+  padding: 14px 18px;
+
+  border: 3px solid #d9e1ee;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #293956;
+
+  font-family: inherit;
+
+  font-size: clamp(1.4rem, 5vw, 2rem);
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  cursor: pointer;
+
+  overflow-wrap: anywhere;
+
+  transition:
+    transform 0.12s ease,
+    border-color 0.12s ease,
+    background-color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+
+/* Desktop / mouse */
+
+@media (hover: hover) {
+
+  .option-button:not(:disabled):hover {
+    transform: translateY(-3px);
+
+    border-color: #6b8cff;
+
+    background: #f5f7ff;
+
+    box-shadow:
+      0 6px 14px rgba(77, 104, 195, 0.15);
+  }
+
+}
+
+
+/* Pressione */
+
+.option-button:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+
+/* ========================================
+   RISPOSTA CORRETTA
+   ======================================== */
+
+.option-button.correct {
+  border-color: #35b76f;
+
+  background: #e6f8ee;
+
+  color: #167541;
+}
+
+
+/* ========================================
+   RISPOSTA SBAGLIATA
+   ======================================== */
+
+.option-button.wrong {
+  border-color: #e85e65;
+
+  background: #fff0f0;
+
+  color: #bd3038;
+}
+
+
+/* Mantiene leggibili i pulsanti disabilitati */
+
+.option-button:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+
+/* ========================================
+   FEEDBACK
+   ======================================== */
+
+.feedback {
+  margin-top: 16px;
+
+  padding-top: 8px;
+
+  animation: feedbackAppear 0.25s ease;
+}
+
+.feedback-icon,
+.celebration {
+  font-size: 3.2rem;
+
+  line-height: 1;
+
+  margin-bottom: 8px;
+}
+
+.feedback-correct {
+  color: #169052;
+
+  font-size: 1.65rem;
+
+  font-weight: 800;
+}
+
+.feedback-wrong {
+  color: #d34d55;
+
+  font-size: 1.65rem;
+
+  font-weight: 800;
+}
+
+
+/* ========================================
+   PAROLA CORRETTA MOSTRATA DOPO RISPOSTA
+   ======================================== */
+
+.correct-word {
+  margin: 12px 0 20px;
+
+  color: #263552;
+
+  font-size: clamp(2rem, 7vw, 3rem);
+
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   PULSANTE AVANTI / GIOCA ANCORA
+   ======================================== */
+
+.next-button {
+  width: 100%;
+
+  max-width: 330px;
+
+  min-height: 62px;
+
+  padding: 14px 24px;
+
+  border: 0;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #536ee8,
+      #7159dc
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 1.2rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 16px rgba(83, 87, 202, 0.25);
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(83, 87, 202, 0.3);
+}
+
+.next-button:active {
+  transform: scale(0.98);
+}
+
+
+/* ========================================
+   SCHERMATA FINALE
+   ======================================== */
+
+.final-text {
+  margin: 8px 0 22px;
+
+  color: #65738a;
+
+  font-size: 1.2rem;
+
+  line-height: 1.5;
+}
+
+.final-score {
+  display: inline-block;
+
+  margin: 4px 0 28px;
+
+  padding: 14px 28px;
+
+  border-radius: 20px;
+
+  background: #f2f5ff;
+
+  color: #445adb;
+
+  font-size: clamp(2.2rem, 8vw, 3.5rem);
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   ANIMAZIONI
+   ======================================== */
+
+@keyframes feedbackAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ========================================
+   TABLET E SCHERMI MEDI
+   ======================================== */
+
+@media (max-width: 700px) {
+
+  .app {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 24px 18px;
+
+    border-radius: 24px;
+  }
+
+  .option-button {
+    flex-basis: calc(50% - 10px);
+
+    min-width: 120px;
+
+    max-width: none;
+  }
+
+}
+
+
+/* ========================================
+   SMARTPHONE
+   ======================================== */
+
+@media (max-width: 430px) {
+
+  .app {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .card {
+    margin-top: 10px;
+
+    padding: 20px 14px;
+
+    border-radius: 22px;
+  }
+
+  .progress-bar {
+    margin-bottom: 22px;
+  }
+
+  .word {
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    padding: 10px;
+  }
+
+  .options {
+    gap: 10px;
+  }
+
+  .option-button {
+    flex-basis: calc(50% - 6px);
+
+    min-width: 0;
+
+    min-height: 66px;
+
+    padding: 10px;
+
+    border-radius: 16px;
+  }
+
+  .feedback-icon {
+    font-size: 2.6rem;
+  }
+
+}
+
+
+/* ========================================
+   SCHERMI MOLTO PICCOLI
+   ======================================== */
+
+@media (max-width: 340px) {
+
+  .option-button {
+    flex-basis: 100%;
+  }
+
+}
+
+
+/* ========================================
+   ACCESSIBILITA':
+   riduce le animazioni se richiesto
+   ===============================
