@@ -129,31 +129,13 @@ export const exercises = [
     id: "gighi-01",
     type: "complete",
     category: "GI_GHI",
-    prompt: "_accio",
-    options: ["GI", "GHI"],
-    answer: "GHI",
-    word: "ghiaccio"
-  },
-  {
-    id: "gighi-02",
-    type: "complete",
-    category: "GI_GHI",
     prompt: "_anda",
     options: ["GI", "GHI"],
     answer: "GHI",
     word: "ghianda"
   },
   {
-    id: "gighi-03",
-    type: "complete",
-    category: "GI_GHI",
-    prompt: "_otto",
-    options: ["GI", "GHI"],
-    answer: "GI",
-    word: "giotto"
-  },
-  {
-    id: "gighi-04",
+    id: "gighi-02",
     type: "complete",
     category: "GI_GHI",
     prompt: "_oco",
@@ -162,7 +144,7 @@ export const exercises = [
     word: "gioco"
   },
   {
-    id: "gighi-05",
+    id: "gighi-03",
     type: "complete",
     category: "GI_GHI",
     prompt: "_ostra",
@@ -171,7 +153,7 @@ export const exercises = [
     word: "giostra"
   },
   {
-    id: "gighi-06",
+    id: "gighi-04",
     type: "complete",
     category: "GI_GHI",
     prompt: "_rasole",
@@ -180,7 +162,7 @@ export const exercises = [
     word: "girasole"
   },
   {
-    id: "gighi-07",
+    id: "gighi-05",
     type: "complete",
     category: "GI_GHI",
     prompt: "_nocchio",
@@ -189,7 +171,7 @@ export const exercises = [
     word: "ginocchio"
   },
   {
-    id: "gighi-08",
+    id: "gighi-06",
     type: "complete",
     category: "GI_GHI",
     prompt: "_glio",
@@ -198,16 +180,7 @@ export const exercises = [
     word: "giglio"
   },
   {
-    id: "gighi-09",
-    type: "complete",
-    category: "GI_GHI",
-    prompt: "_ro",
-    options: ["GI", "GHI"],
-    answer: "GI",
-    word: "giro"
-  },
-  {
-    id: "gighi-10",
+    id: "gighi-07",
     type: "complete",
     category: "GI_GHI",
     prompt: "_ta",
@@ -321,9 +294,9 @@ export const exercises = [
     id: "cocio-05",
     type: "complete",
     category: "CO_CIO",
-    prompt: "_ccolato",
+    prompt: "coc__lato",
     options: ["CO", "CIO"],
-    answer: "CIO",
+    answer: "CO",
     word: "cioccolato"
   },
   {
@@ -334,15 +307,6 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CIO",
     word: "ciotola"
-  },
-  {
-    id: "cocio-07",
-    type: "complete",
-    category: "CO_CIO",
-    prompt: "_uffo",
-    options: ["CO", "CIO"],
-    answer: "CIO",
-    word: "ciuffo"
   },
 
 
@@ -547,10 +511,10 @@ export const exercises = [
     id: "ftv-01",
     type: "complete",
     category: "F_T_V",
-    prompt: "_ata",
+    prompt: "_iume",
     options: ["f", "t", "v"],
     answer: "f",
-    word: "fata"
+    word: "fiume"
   },
   {
     id: "ftv-02",
@@ -574,19 +538,19 @@ export const exercises = [
     id: "ftv-04",
     type: "complete",
     category: "F_T_V",
-    prompt: "_oto",
+    prompt: "_igre",
     options: ["f", "t", "v"],
-    answer: "f",
-    word: "foto"
+    answer: "t",
+    word: "tigre"
   },
   {
     id: "ftv-05",
     type: "complete",
     category: "F_T_V",
-    prompt: "_ela",
+    prompt: "_olpe",
     options: ["f", "t", "v"],
     answer: "v",
-    word: "vela"
+    word: "volpe"
   },
   {
     id: "ftv-06",
@@ -610,10 +574,10 @@ export const exercises = [
     id: "ftv-08",
     type: "complete",
     category: "F_T_V",
-    prompt: "_oro",
+    prompt: "_arfalla",
     options: ["f", "t", "v"],
-    answer: "t",
-    word: "toro"
+    answer: "f",
+    word: "farfalla"
   },
   {
     id: "ftv-09",
@@ -637,10 +601,10 @@ export const exercises = [
     id: "pqbd-01",
     type: "complete",
     category: "P_Q_B_D",
-    prompt: "_alla",
+    prompt: "_iuma",
     options: ["p", "q", "b", "d"],
     answer: "p",
-    word: "palla"
+    word: "piuma"
   },
   {
     id: "pqbd-02",
@@ -682,10 +646,10 @@ export const exercises = [
     id: "pqbd-06",
     type: "complete",
     category: "P_Q_B_D",
-    prompt: "_arca",
+    prompt: "_alena",
     options: ["p", "q", "b", "d"],
     answer: "b",
-    word: "barca"
+    word: "balena"
   },
   {
     id: "pqbd-07",
@@ -736,10 +700,10 @@ export const exercises = [
     id: "pqbd-12",
     type: "complete",
     category: "P_Q_B_D",
-    prompt: "_occia",
+    prompt: "_elfino",
     options: ["p", "q", "b", "d"],
     answer: "d",
-    word: "doccia"
+    word: "delfino"
   },
   {
     id: "pqbd-13",
@@ -758,6 +722,107 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "q",
     word: "quasi"
+  },
+
+  
+  // ========================================
+  // 10. GN / NI
+  //
+  // Completa la parola scegliendo GN oppure NI.
+  // Ogni esercizio è costruito in modo che
+  // una sola alternativa produca la parola
+  // comune prevista.
+  // ========================================
+
+  {
+    id: "gnni-01",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "pi_a",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "pigna"
+  },
+  {
+    id: "gnni-02",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "spu_a",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "spugna"
+  },
+  {
+    id: "gnni-03",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "lava_a",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "lavagna"
+  },
+  {
+    id: "gnni-04",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "pu_o",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "pugno"
+  },
+  {
+    id: "gnni-05",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "le_o",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "legno"
+  },
+  {
+    id: "gnni-06",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "so_o",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "sogno"
+  },
+  {
+    id: "gnni-07",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "ba_o",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "bagno"
+  },
+  {
+    id: "gnni-08",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "ra_o",
+    options: ["gn", "ni"],
+    answer: "gn",
+    word: "ragno"
+  },
+  {
+    id: "gnni-09",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "ge_o",
+    options: ["gn", "ni"],
+    answer: "ni",
+    word: "genio"
+  },
+  {
+    id: "gnni-10",
+    type: "complete",
+    category: "GN_NI",
+    prompt: "pa_ere",
+    options: ["gn", "ni"],
+    answer: "ni",
+    word: "paniere"
   }
 
 ];
