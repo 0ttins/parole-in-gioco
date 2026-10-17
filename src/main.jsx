@@ -7,11 +7,19 @@ const QUESTIONS_PER_GAME = 10;
 
 
 // ========================================
-// Mischia casualmente un array
+// Mischia un array con Fisher-Yates
 // ========================================
 
 function shuffle(array) {
-  return [...array].sort(() => Math.random() - 0.5);
+  const copy = [...array];
+
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+
+  return copy;
 }
 
 
@@ -20,7 +28,18 @@ function shuffle(array) {
 // ========================================
 
 function createGame() {
-  return shuffle(exercises).slice(0, QUESTIONS_PER_GAME);
+  const shuffledExercises = shuffle(exercises);
+
+  const selectedExercises = shuffledExercises.slice(
+    0,
+    Math.min(QUESTIONS_PER_GAME, shuffledExercises.length)
+  );
+
+  // Mischia anche l'ordine delle risposte
+  return selectedExercises.map((exercise) => ({
+    ...exercise,
+    options: shuffle(exercise.options)
+  }));
 }
 
 
@@ -38,8 +57,10 @@ function App() {
   const currentExercise = game[currentIndex];
 
   const answered = selectedAnswer !== null;
+
   const isCorrect =
-    answered && selectedAnswer === currentExercise.answer;
+    answered &&
+    selectedAnswer === currentExercise.answer;
 
 
   // ========================================
@@ -47,7 +68,10 @@ function App() {
   // ========================================
 
   function handleAnswer(option) {
-    if (answered) return;
+    // Impedisce di rispondere due volte
+    if (answered) {
+      return;
+    }
 
     setSelectedAnswer(option);
 
@@ -62,7 +86,7 @@ function App() {
   // ========================================
 
   function handleNext() {
-    if (currentIndex === game.length - 1) {
+    if (currentIndex >= game.length - 1) {
       setFinished(true);
       return;
     }
@@ -127,7 +151,6 @@ function App() {
 
   return (
     <main className="app">
-
       <div className="card">
 
         <div className="top-bar">
@@ -147,8 +170,9 @@ function App() {
           <div
             className="progress-fill"
             style={{
-              width:
-                `${((currentIndex + 1) / game.length) * 100}%`
+              width: `${
+                ((currentIndex + 1) / game.length) * 100
+              }%`
             }}
           />
         </div>
@@ -176,19 +200,14 @@ function App() {
         <div className="options">
 
           {currentExercise.options.map((option) => {
-
             let buttonClass = "option-button";
 
             if (answered) {
-
               if (option === currentExercise.answer) {
                 buttonClass += " correct";
-              }
-
-              else if (option === selectedAnswer) {
+              } else if (option === selectedAnswer) {
                 buttonClass += " wrong";
               }
-
             }
 
             return (
@@ -207,7 +226,6 @@ function App() {
 
 
         {answered && (
-
           <div className="feedback">
 
             {isCorrect ? (
@@ -248,23 +266,21 @@ function App() {
             </button>
 
           </div>
-
         )}
 
       </div>
-
     </main>
   );
 }
 
 
 // ========================================
-// Avvio di React
+// Avvio dell'app React
 // ========================================
 
-createRoot(
-  document.getElementById("root")
-).render(
+const rootElement = document.getElementById("root");
+
+createRoot(rootElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
