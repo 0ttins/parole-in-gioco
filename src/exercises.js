@@ -475,7 +475,7 @@ export const exercises = [
     type: "correctWord",
     category: "CORRECT_WORD",
     prompt: "Quale parola è scritta bene?",
-    options: ["ciesa", "chiesa", "chiesa"],
+    options: ["ciesa", "chiesa", "chesa"],
     answer: "chiesa",
     word: "chiesa"
   },
