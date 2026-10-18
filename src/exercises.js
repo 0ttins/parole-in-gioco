@@ -8,7 +8,7 @@
 //   "correctWord" = scegli la parola scritta correttamente
 //
 // category:
-//   identifica l'abilità che stiamo allenando
+//   identifica l'abilità allenata
 //
 // prompt:
 //   testo mostrato al bambino
@@ -21,6 +21,10 @@
 //
 // word:
 //   parola completa corretta
+//
+// image:
+//   immagine associata alla parola
+//   null = nessuna immagine
 // ========================================
 
 export const exercises = [
@@ -36,7 +40,8 @@ export const exercises = [
     prompt: "_ave",
     options: ["CI", "CHI"],
     answer: "CHI",
-    word: "chiave"
+    word: "chiave",
+    image: "/images/chiave.webp"
   },
   {
     id: "cichi-02",
@@ -45,7 +50,8 @@ export const exercises = [
     prompt: "_esa",
     options: ["CI", "CHI"],
     answer: "CHI",
-    word: "chiesa"
+    word: "chiesa",
+    image: "/images/chiesa.webp"
   },
   {
     id: "cichi-03",
@@ -54,7 +60,8 @@ export const exercises = [
     prompt: "_odo",
     options: ["CI", "CHI"],
     answer: "CHI",
-    word: "chiodo"
+    word: "chiodo",
+    image: "/images/chiodo.webp"
   },
   {
     id: "cichi-04",
@@ -63,7 +70,8 @@ export const exercises = [
     prompt: "_uso",
     options: ["CI", "CHI"],
     answer: "CHI",
-    word: "chiuso"
+    word: "chiuso",
+    image: null
   },
   {
     id: "cichi-05",
@@ -72,7 +80,8 @@ export const exercises = [
     prompt: "_tarra",
     options: ["CI", "CHI"],
     answer: "CHI",
-    word: "chitarra"
+    word: "chitarra",
+    image: "/images/chitarra.webp"
   },
   {
     id: "cichi-06",
@@ -81,7 +90,8 @@ export const exercises = [
     prompt: "_bo",
     options: ["CI", "CHI"],
     answer: "CI",
-    word: "cibo"
+    word: "cibo",
+    image: "/images/cibo.webp"
   },
   {
     id: "cichi-07",
@@ -90,7 +100,8 @@ export const exercises = [
     prompt: "_ma",
     options: ["CI", "CHI"],
     answer: "CI",
-    word: "cima"
+    word: "cima",
+    image: "/images/cima.webp"
   },
   {
     id: "cichi-08",
@@ -99,7 +110,8 @@ export const exercises = [
     prompt: "_nema",
     options: ["CI", "CHI"],
     answer: "CI",
-    word: "cinema"
+    word: "cinema",
+    image: "/images/cinema.webp"
   },
   {
     id: "cichi-09",
@@ -108,7 +120,8 @@ export const exercises = [
     prompt: "_vetta",
     options: ["CI", "CHI"],
     answer: "CI",
-    word: "civetta"
+    word: "civetta",
+    image: "/images/civetta.webp"
   },
   {
     id: "cichi-10",
@@ -117,7 +130,8 @@ export const exercises = [
     prompt: "_polla",
     options: ["CI", "CHI"],
     answer: "CI",
-    word: "cipolla"
+    word: "cipolla",
+    image: "/images/cipolla.webp"
   },
 
 
@@ -132,7 +146,8 @@ export const exercises = [
     prompt: "_anda",
     options: ["GI", "GHI"],
     answer: "GHI",
-    word: "ghianda"
+    word: "ghianda",
+    image: "/images/ghianda.webp"
   },
   {
     id: "gighi-02",
@@ -141,7 +156,8 @@ export const exercises = [
     prompt: "_oco",
     options: ["GI", "GHI"],
     answer: "GI",
-    word: "gioco"
+    word: "gioco",
+    image: "/images/gioco.webp"
   },
   {
     id: "gighi-03",
@@ -150,7 +166,8 @@ export const exercises = [
     prompt: "_ostra",
     options: ["GI", "GHI"],
     answer: "GI",
-    word: "giostra"
+    word: "giostra",
+    image: "/images/giostra.webp"
   },
   {
     id: "gighi-04",
@@ -159,7 +176,8 @@ export const exercises = [
     prompt: "_rasole",
     options: ["GI", "GHI"],
     answer: "GI",
-    word: "girasole"
+    word: "girasole",
+    image: "/images/girasole.webp"
   },
   {
     id: "gighi-05",
@@ -168,7 +186,8 @@ export const exercises = [
     prompt: "_nocchio",
     options: ["GI", "GHI"],
     answer: "GI",
-    word: "ginocchio"
+    word: "ginocchio",
+    image: "/images/ginocchio.webp"
   },
   {
     id: "gighi-06",
@@ -177,7 +196,8 @@ export const exercises = [
     prompt: "_glio",
     options: ["GI", "GHI"],
     answer: "GI",
-    word: "giglio"
+    word: "giglio",
+    image: "/images/giglio.webp"
   },
   {
     id: "gighi-07",
@@ -186,7 +206,8 @@ export const exercises = [
     prompt: "_ta",
     options: ["GI", "GHI"],
     answer: "GI",
-    word: "gita"
+    word: "gita",
+    image: null
   },
 
 
@@ -201,7 +222,8 @@ export const exercises = [
     prompt: "_ne",
     options: ["CA", "CIA"],
     answer: "CA",
-    word: "cane"
+    word: "cane",
+    image: "/images/cane.webp"
   },
   {
     id: "cacia-02",
@@ -210,7 +232,8 @@ export const exercises = [
     prompt: "_sa",
     options: ["CA", "CIA"],
     answer: "CA",
-    word: "casa"
+    word: "casa",
+    image: "/images/casa.webp"
   },
   {
     id: "cacia-03",
@@ -219,7 +242,8 @@ export const exercises = [
     prompt: "_micia",
     options: ["CA", "CIA"],
     answer: "CA",
-    word: "camicia"
+    word: "camicia",
+    image: "/images/camicia.webp"
   },
   {
     id: "cacia-04",
@@ -228,7 +252,8 @@ export const exercises = [
     prompt: "_pello",
     options: ["CA", "CIA"],
     answer: "CA",
-    word: "capello"
+    word: "capello",
+    image: "/images/capello.webp"
   },
   {
     id: "cacia-05",
@@ -237,7 +262,8 @@ export const exercises = [
     prompt: "_o",
     options: ["CA", "CIA"],
     answer: "CIA",
-    word: "ciao"
+    word: "ciao",
+    image: null
   },
   {
     id: "cacia-06",
@@ -246,7 +272,8 @@ export const exercises = [
     prompt: "_batta",
     options: ["CA", "CIA"],
     answer: "CIA",
-    word: "ciabatta"
+    word: "ciabatta",
+    image: "/images/ciabatta.webp"
   },
 
 
@@ -261,7 +288,8 @@ export const exercises = [
     prompt: "_da",
     options: ["CO", "CIO"],
     answer: "CO",
-    word: "coda"
+    word: "coda",
+    image: "/images/coda.webp"
   },
   {
     id: "cocio-02",
@@ -270,7 +298,8 @@ export const exercises = [
     prompt: "_rona",
     options: ["CO", "CIO"],
     answer: "CO",
-    word: "corona"
+    word: "corona",
+    image: "/images/corona.webp"
   },
   {
     id: "cocio-03",
@@ -279,7 +308,8 @@ export const exercises = [
     prompt: "_lore",
     options: ["CO", "CIO"],
     answer: "CO",
-    word: "colore"
+    word: "colore",
+    image: "/images/colore.webp"
   },
   {
     id: "cocio-04",
@@ -288,16 +318,18 @@ export const exercises = [
     prompt: "_llina",
     options: ["CO", "CIO"],
     answer: "CO",
-    word: "collina"
+    word: "collina",
+    image: "/images/collina.webp"
   },
   {
     id: "cocio-05",
     type: "complete",
     category: "CO_CIO",
-    prompt: "coc__lato",
+    prompt: "cioc__lato",
     options: ["CO", "CIO"],
     answer: "CO",
-    word: "cioccolato"
+    word: "cioccolato",
+    image: "/images/cioccolato.webp"
   },
   {
     id: "cocio-06",
@@ -306,7 +338,8 @@ export const exercises = [
     prompt: "_tola",
     options: ["CO", "CIO"],
     answer: "CIO",
-    word: "ciotola"
+    word: "ciotola",
+    image: "/images/ciotola.webp"
   },
 
 
@@ -321,7 +354,8 @@ export const exercises = [
     prompt: "_bo",
     options: ["CU", "CIU"],
     answer: "CU",
-    word: "cubo"
+    word: "cubo",
+    image: "/images/cubo.webp"
   },
   {
     id: "cuciu-02",
@@ -330,7 +364,8 @@ export const exercises = [
     prompt: "_lla",
     options: ["CU", "CIU"],
     answer: "CU",
-    word: "culla"
+    word: "culla",
+    image: "/images/culla.webp"
   },
   {
     id: "cuciu-03",
@@ -339,7 +374,8 @@ export const exercises = [
     prompt: "_cina",
     options: ["CU", "CIU"],
     answer: "CU",
-    word: "cucina"
+    word: "cucina",
+    image: "/images/cucina.webp"
   },
   {
     id: "cuciu-04",
@@ -348,7 +384,8 @@ export const exercises = [
     prompt: "_ffo",
     options: ["CU", "CIU"],
     answer: "CIU",
-    word: "ciuffo"
+    word: "ciuffo",
+    image: "/images/ciuffo.webp"
   },
   {
     id: "cuciu-05",
@@ -357,7 +394,8 @@ export const exercises = [
     prompt: "_ccio",
     options: ["CU", "CIU"],
     answer: "CIU",
-    word: "ciuccio"
+    word: "ciuccio",
+    image: "/images/ciuccio.webp"
   },
 
 
@@ -372,7 +410,8 @@ export const exercises = [
     prompt: "_ra",
     options: ["CE", "CIE"],
     answer: "CE",
-    word: "cera"
+    word: "cera",
+    image: "/images/cera.webp"
   },
   {
     id: "cecie-02",
@@ -381,7 +420,8 @@ export const exercises = [
     prompt: "_na",
     options: ["CE", "CIE"],
     answer: "CE",
-    word: "cena"
+    word: "cena",
+    image: "/images/cena.webp"
   },
   {
     id: "cecie-03",
@@ -390,7 +430,8 @@ export const exercises = [
     prompt: "_sto",
     options: ["CE", "CIE"],
     answer: "CE",
-    word: "cesto"
+    word: "cesto",
+    image: "/images/cesto.webp"
   },
   {
     id: "cecie-04",
@@ -399,7 +440,8 @@ export const exercises = [
     prompt: "_rchio",
     options: ["CE", "CIE"],
     answer: "CE",
-    word: "cerchio"
+    word: "cerchio",
+    image: "/images/cerchio.webp"
   },
   {
     id: "cecie-05",
@@ -408,7 +450,8 @@ export const exercises = [
     prompt: "_lo",
     options: ["CE", "CIE"],
     answer: "CIE",
-    word: "cielo"
+    word: "cielo",
+    image: "/images/cielo.webp"
   },
   {
     id: "cecie-06",
@@ -417,11 +460,10 @@ export const exercises = [
     prompt: "_co",
     options: ["CE", "CIE"],
     answer: "CIE",
-    word: "cieco"
+    word: "cieco",
+    image: null
   },
-
-
-  // ========================================
+    // ========================================
   // 7. SCEGLI LA PAROLA SCRITTA BENE
   // ========================================
 
@@ -432,7 +474,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["ciave", "chiave", "chiaave"],
     answer: "chiave",
-    word: "chiave"
+    word: "chiave",
+    image: "/images/chiave.webp"
   },
   {
     id: "correct-02",
@@ -441,7 +484,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["ciesa", "chiesa", "chesa"],
     answer: "chiesa",
-    word: "chiesa"
+    word: "chiesa",
+    image: "/images/chiesa.webp"
   },
   {
     id: "correct-03",
@@ -450,7 +494,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["giaccio", "ghiaccio", "ghiachio"],
     answer: "ghiaccio",
-    word: "ghiaccio"
+    word: "ghiaccio",
+    image: "/images/ghiaccio.webp"
   },
   {
     id: "correct-04",
@@ -459,7 +504,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["ghioco", "gioco", "giocco"],
     answer: "gioco",
-    word: "gioco"
+    word: "gioco",
+    image: "/images/gioco.webp"
   },
   {
     id: "correct-05",
@@ -468,7 +514,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["ciocolato", "cioccolato", "coccolato"],
     answer: "cioccolato",
-    word: "cioccolato"
+    word: "cioccolato",
+    image: "/images/cioccolato.webp"
   },
   {
     id: "correct-06",
@@ -477,7 +524,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["celo", "cielo", "ciello"],
     answer: "cielo",
-    word: "cielo"
+    word: "cielo",
+    image: "/images/cielo.webp"
   },
   {
     id: "correct-07",
@@ -486,7 +534,8 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["cuffo", "ciuffo", "ciufo"],
     answer: "ciuffo",
-    word: "ciuffo"
+    word: "ciuffo",
+    image: "/images/ciuffo.webp"
   },
   {
     id: "correct-08",
@@ -495,16 +544,13 @@ export const exercises = [
     prompt: "Quale parola è scritta bene?",
     options: ["ciucina", "cucina", "cuchina"],
     answer: "cucina",
-    word: "cucina"
+    word: "cucina",
+    image: "/images/cucina.webp"
   },
 
 
   // ========================================
   // 8. LETTERE SIMILI: F / T / V
-  //
-  // Qui NON usiamo sempre tutte e tre le lettere.
-  // Le alternative sono scelte in modo da evitare
-  // che ci siano due risposte corrette.
   // ========================================
 
   {
@@ -514,7 +560,8 @@ export const exercises = [
     prompt: "_iume",
     options: ["f", "t", "v"],
     answer: "f",
-    word: "fiume"
+    word: "fiume",
+    image: "/images/fiume.webp"
   },
   {
     id: "ftv-02",
@@ -523,7 +570,8 @@ export const exercises = [
     prompt: "_ilo",
     options: ["f", "t", "v"],
     answer: "f",
-    word: "filo"
+    word: "filo",
+    image: "/images/filo.webp"
   },
   {
     id: "ftv-03",
@@ -532,7 +580,8 @@ export const exercises = [
     prompt: "_oca",
     options: ["f", "t", "v"],
     answer: "f",
-    word: "foca"
+    word: "foca",
+    image: "/images/foca.webp"
   },
   {
     id: "ftv-04",
@@ -541,7 +590,8 @@ export const exercises = [
     prompt: "_igre",
     options: ["f", "t", "v"],
     answer: "t",
-    word: "tigre"
+    word: "tigre",
+    image: "/images/tigre.webp"
   },
   {
     id: "ftv-05",
@@ -550,7 +600,8 @@ export const exercises = [
     prompt: "_olpe",
     options: ["f", "t", "v"],
     answer: "v",
-    word: "volpe"
+    word: "volpe",
+    image: "/images/volpe.webp"
   },
   {
     id: "ftv-06",
@@ -559,7 +610,8 @@ export const exercises = [
     prompt: "_aso",
     options: ["f", "t", "v"],
     answer: "v",
-    word: "vaso"
+    word: "vaso",
+    image: "/images/vaso.webp"
   },
   {
     id: "ftv-07",
@@ -568,7 +620,8 @@ export const exercises = [
     prompt: "_opo",
     options: ["f", "t", "v"],
     answer: "t",
-    word: "topo"
+    word: "topo",
+    image: "/images/topo.webp"
   },
   {
     id: "ftv-08",
@@ -577,7 +630,8 @@ export const exercises = [
     prompt: "_arfalla",
     options: ["f", "t", "v"],
     answer: "f",
-    word: "farfalla"
+    word: "farfalla",
+    image: "/images/farfalla.webp"
   },
   {
     id: "ftv-09",
@@ -586,15 +640,13 @@ export const exercises = [
     prompt: "_etto",
     options: ["f", "t", "v"],
     answer: "t",
-    word: "tetto"
+    word: "tetto",
+    image: "/images/tetto.webp"
   },
 
 
   // ========================================
   // 9. LETTERE CHE SI CONFONDONO: P / Q / B / D
-  //
-  // Le alternative sono definite esercizio per
-  // esercizio per ridurre le ambiguità.
   // ========================================
 
   {
@@ -604,7 +656,8 @@ export const exercises = [
     prompt: "_iuma",
     options: ["p", "q", "b", "d"],
     answer: "p",
-    word: "piuma"
+    word: "piuma",
+    image: "/images/piuma.webp"
   },
   {
     id: "pqbd-02",
@@ -613,7 +666,8 @@ export const exercises = [
     prompt: "_ane",
     options: ["p", "q", "b", "d"],
     answer: "p",
-    word: "pane"
+    word: "pane",
+    image: "/images/pane.webp"
   },
   {
     id: "pqbd-03",
@@ -622,7 +676,8 @@ export const exercises = [
     prompt: "_era",
     options: ["p", "q", "b", "d"],
     answer: "p",
-    word: "pera"
+    word: "pera",
+    image: "/images/pera.webp"
   },
   {
     id: "pqbd-04",
@@ -631,7 +686,8 @@ export const exercises = [
     prompt: "_onte",
     options: ["p", "q", "b", "d"],
     answer: "p",
-    word: "ponte"
+    word: "ponte",
+    image: "/images/ponte.webp"
   },
   {
     id: "pqbd-05",
@@ -640,7 +696,8 @@ export const exercises = [
     prompt: "_arco",
     options: ["p", "q", "b", "d"],
     answer: "p",
-    word: "parco"
+    word: "parco",
+    image: "/images/parco.webp"
   },
   {
     id: "pqbd-06",
@@ -649,7 +706,8 @@ export const exercises = [
     prompt: "_alena",
     options: ["p", "q", "b", "d"],
     answer: "b",
-    word: "balena"
+    word: "balena",
+    image: "/images/balena.webp"
   },
   {
     id: "pqbd-07",
@@ -658,7 +716,8 @@ export const exercises = [
     prompt: "_orsa",
     options: ["p", "q", "b", "d"],
     answer: "b",
-    word: "borsa"
+    word: "borsa",
+    image: "/images/borsa.webp"
   },
   {
     id: "pqbd-08",
@@ -667,7 +726,8 @@ export const exercises = [
     prompt: "_uco",
     options: ["p", "q", "b", "d"],
     answer: "b",
-    word: "buco"
+    word: "buco",
+    image: "/images/buco.webp"
   },
   {
     id: "pqbd-09",
@@ -676,7 +736,8 @@ export const exercises = [
     prompt: "_ente",
     options: ["p", "q", "b", "d"],
     answer: "d",
-    word: "dente"
+    word: "dente",
+    image: "/images/dente.webp"
   },
   {
     id: "pqbd-10",
@@ -685,7 +746,8 @@ export const exercises = [
     prompt: "_ado",
     options: ["p", "q", "b", "d"],
     answer: "d",
-    word: "dado"
+    word: "dado",
+    image: "/images/dado.webp"
   },
   {
     id: "pqbd-11",
@@ -694,7 +756,8 @@ export const exercises = [
     prompt: "_ito",
     options: ["p", "q", "b", "d"],
     answer: "d",
-    word: "dito"
+    word: "dito",
+    image: "/images/dito.webp"
   },
   {
     id: "pqbd-12",
@@ -703,7 +766,8 @@ export const exercises = [
     prompt: "_elfino",
     options: ["p", "q", "b", "d"],
     answer: "d",
-    word: "delfino"
+    word: "delfino",
+    image: "/images/delfino.webp"
   },
   {
     id: "pqbd-13",
@@ -712,7 +776,8 @@ export const exercises = [
     prompt: "_uadro",
     options: ["p", "q", "b", "d"],
     answer: "q",
-    word: "quadro"
+    word: "quadro",
+    image: "/images/quadro.webp"
   },
   {
     id: "pqbd-14",
@@ -721,17 +786,13 @@ export const exercises = [
     prompt: "_uasi",
     options: ["p", "q", "b", "d"],
     answer: "q",
-    word: "quasi"
+    word: "quasi",
+    image: null
   },
 
-  
+
   // ========================================
   // 10. GN / NI
-  //
-  // Completa la parola scegliendo GN oppure NI.
-  // Ogni esercizio è costruito in modo che
-  // una sola alternativa produca la parola
-  // comune prevista.
   // ========================================
 
   {
@@ -741,7 +802,8 @@ export const exercises = [
     prompt: "pi_a",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "pigna"
+    word: "pigna",
+    image: "/images/pigna.webp"
   },
   {
     id: "gnni-02",
@@ -750,7 +812,8 @@ export const exercises = [
     prompt: "spu_a",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "spugna"
+    word: "spugna",
+    image: "/images/spugna.webp"
   },
   {
     id: "gnni-03",
@@ -759,7 +822,8 @@ export const exercises = [
     prompt: "lava_a",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "lavagna"
+    word: "lavagna",
+    image: "/images/lavagna.webp"
   },
   {
     id: "gnni-04",
@@ -768,7 +832,8 @@ export const exercises = [
     prompt: "pu_o",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "pugno"
+    word: "pugno",
+    image: "/images/pugno.webp"
   },
   {
     id: "gnni-05",
@@ -777,7 +842,8 @@ export const exercises = [
     prompt: "le_o",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "legno"
+    word: "legno",
+    image: "/images/legno.webp"
   },
   {
     id: "gnni-06",
@@ -786,7 +852,8 @@ export const exercises = [
     prompt: "so_o",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "sogno"
+    word: "sogno",
+    image: null
   },
   {
     id: "gnni-07",
@@ -795,7 +862,8 @@ export const exercises = [
     prompt: "ba_o",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "bagno"
+    word: "bagno",
+    image: "/images/bagno.webp"
   },
   {
     id: "gnni-08",
@@ -804,7 +872,8 @@ export const exercises = [
     prompt: "ra_o",
     options: ["gn", "ni"],
     answer: "gn",
-    word: "ragno"
+    word: "ragno",
+    image: "/images/ragno.webp"
   },
   {
     id: "gnni-09",
@@ -813,7 +882,8 @@ export const exercises = [
     prompt: "ge_o",
     options: ["gn", "ni"],
     answer: "ni",
-    word: "genio"
+    word: "genio",
+    image: null
   },
   {
     id: "gnni-10",
@@ -822,7 +892,8 @@ export const exercises = [
     prompt: "pa_ere",
     options: ["gn", "ni"],
     answer: "ni",
-    word: "paniere"
+    word: "paniere",
+    image: "/images/paniere.webp"
   }
 
 ];
