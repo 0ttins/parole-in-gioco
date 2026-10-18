@@ -1,11 +1,10 @@
 /* ========================================
    PAROLE IN GIOCO
-   style.css
    ======================================== */
 
 
 /* ========================================
-   RESET E PAGINA
+   RESET
    ======================================== */
 
 * {
@@ -16,6 +15,7 @@ html,
 body,
 #root {
   margin: 0;
+  width: 100%;
   min-height: 100%;
 }
 
@@ -32,18 +32,18 @@ body {
 
   background:
     linear-gradient(
-      135deg,
-      #e8f5ff 0%,
-      #f7f3ff 50%,
-      #fff4df 100%
+      145deg,
+      #fff6bf 0%,
+      #ffe98a 50%,
+      #ffd866 100%
     );
 
-  color: #24324a;
+  color: #263238;
 }
 
 
 /* ========================================
-   CONTENITORE PRINCIPALE
+   APP
    ======================================== */
 
 .app {
@@ -53,26 +53,30 @@ body {
   align-items: center;
   justify-content: center;
 
-  padding: 24px;
+  padding: 20px;
 }
 
 
 /* ========================================
-   SCHEDA DEL GIOCO
+   CARD PRINCIPALE
    ======================================== */
 
 .card {
+  position: relative;
+
   width: 100%;
   max-width: 720px;
 
-  background: white;
+  padding: 28px 30px 32px;
 
-  border-radius: 28px;
+  background: #ffffff;
 
-  padding: 32px;
+  border: 4px solid #ffd84d;
+  border-radius: 30px;
 
   box-shadow:
-    0 12px 35px rgba(44, 62, 100, 0.12);
+    0 10px 0 #e9bd29,
+    0 18px 35px rgba(80, 62, 10, 0.16);
 
   text-align: center;
 }
@@ -83,47 +87,95 @@ body {
    ======================================== */
 
 .top-bar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 
+  width: 100%;
+
   margin-bottom: 10px;
-
-  font-size: 1rem;
-  font-weight: 700;
-
-  color: #65738a;
-}
-
-.progress-text,
-.score-text {
-  min-width: 70px;
 }
 
 .progress-text {
-  text-align: left;
+  justify-self: start;
+
+  font-size: 1.05rem;
+  font-weight: 800;
+
+  color: #6b6250;
 }
 
 .score-text {
-  text-align: right;
+  justify-self: end;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+
+  color: #4d4638;
 }
 
 
 /* ========================================
-   BARRA DI AVANZAMENTO
+   PULSANTE SUONO
+   ======================================== */
+
+.sound-button {
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  border: 2px solid #ffd84d;
+  border-radius: 50%;
+
+  background: #fff7c9;
+
+  font-size: 1.45rem;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 0 #ecc340;
+
+  transition:
+    transform 0.12s ease,
+    background-color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.sound-button:hover {
+  background: #ffef98;
+}
+
+.sound-button:active {
+  transform: translateY(2px);
+
+  box-shadow:
+    0 1px 0 #ecc340;
+}
+
+
+/* ========================================
+   PROGRESS BAR
    ======================================== */
 
 .progress-bar {
   width: 100%;
-  height: 12px;
+  height: 13px;
 
-  background: #edf1f7;
-
-  border-radius: 999px;
+  margin-bottom: 20px;
 
   overflow: hidden;
 
-  margin-bottom: 28px;
+  background: #f4f0df;
+
+  border-radius: 999px;
 }
 
 .progress-fill {
@@ -132,8 +184,8 @@ body {
   background:
     linear-gradient(
       90deg,
-      #55b8ff,
-      #7067e8
+      #ffcc29,
+      #ffad33
     );
 
   border-radius: 999px;
@@ -148,13 +200,49 @@ body {
 
 .title,
 .card h1 {
-  margin: 0 0 16px;
+  margin: 0 0 15px;
 
-  color: #263552;
+  color: #333333;
 
-  font-size: clamp(2rem, 6vw, 3rem);
-
+  font-size: clamp(2rem, 5vw, 2.8rem);
   line-height: 1.1;
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   IMMAGINE
+   ======================================== */
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 150px;
+
+  margin: 5px auto 16px;
+}
+
+.exercise-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: min(100%, 300px);
+  max-height: 220px;
+
+  object-fit: contain;
+
+  border-radius: 20px;
+
+  filter:
+    drop-shadow(
+      0 5px 8px rgba(0, 0, 0, 0.12)
+    );
 }
 
 
@@ -163,13 +251,12 @@ body {
    ======================================== */
 
 .instruction {
-  margin: 0 0 20px;
+  margin: 10px 0 10px;
 
-  color: #647189;
+  color: #665e4f;
 
   font-size: clamp(1.1rem, 3vw, 1.35rem);
-
-  font-weight: 600;
+  font-weight: 700;
 }
 
 
@@ -178,26 +265,25 @@ body {
    ======================================== */
 
 .word {
-  margin: 20px auto 28px;
+  margin: 8px auto 22px;
 
-  padding: 18px 20px;
+  padding: 10px 15px;
 
-  font-size: clamp(2.4rem, 10vw, 4.5rem);
+  color: #2d2d2d;
 
-  font-weight: 800;
+  font-size: clamp(2.5rem, 9vw, 4.6rem);
 
-  line-height: 1.15;
+  font-weight: 900;
+  line-height: 1.1;
 
   letter-spacing: 0.04em;
-
-  color: #253653;
 
   overflow-wrap: anywhere;
 }
 
 
 /* ========================================
-   CONTENITORE DELLE RISPOSTE
+   RISPOSTE
    ======================================== */
 
 .options {
@@ -206,78 +292,88 @@ body {
 
   justify-content: center;
 
+  width: 100%;
+
   gap: 14px;
 
-  margin: 12px auto 24px;
-
-  width: 100%;
+  margin: 10px auto 20px;
 }
 
 
 /* ========================================
-   PULSANTI RISPOSTA
+   PULSANTI DELLE RISPOSTE
    ======================================== */
 
 .option-button {
   flex: 1 1 130px;
 
-  min-width: 110px;
-  max-width: 260px;
+  min-width: 115px;
+  max-width: 280px;
 
   min-height: 72px;
 
   padding: 14px 18px;
 
-  border: 3px solid #d9e1ee;
-
+  border: 3px solid #ffd249;
   border-radius: 20px;
 
-  background: #ffffff;
+  background:
+    linear-gradient(
+      180deg,
+      #fff9d9 0%,
+      #ffed9a 100%
+    );
 
-  color: #293956;
+  color: #343434;
 
   font-family: inherit;
 
-  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-size: clamp(1.4rem, 4vw, 2rem);
 
-  font-weight: 800;
-
+  font-weight: 900;
   line-height: 1.15;
 
   cursor: pointer;
 
   overflow-wrap: anywhere;
 
+  box-shadow:
+    0 5px 0 #dfb72f;
+
   transition:
     transform 0.12s ease,
     border-color 0.12s ease,
-    background-color 0.12s ease,
+    background 0.12s ease,
     box-shadow 0.12s ease;
 }
 
-
-/* Desktop / mouse */
 
 @media (hover: hover) {
 
   .option-button:not(:disabled):hover {
     transform: translateY(-3px);
 
-    border-color: #6b8cff;
+    background:
+      linear-gradient(
+        180deg,
+        #fff4ab,
+        #ffe274
+      );
 
-    background: #f5f7ff;
+    border-color: #f6bb21;
 
     box-shadow:
-      0 6px 14px rgba(77, 104, 195, 0.15);
+      0 8px 0 #dfb72f;
   }
 
 }
 
 
-/* Pressione */
-
 .option-button:not(:disabled):active {
-  transform: scale(0.97);
+  transform: translateY(3px);
+
+  box-shadow:
+    0 2px 0 #dfb72f;
 }
 
 
@@ -286,28 +382,42 @@ body {
    ======================================== */
 
 .option-button.correct {
-  border-color: #35b76f;
+  border-color: #39ad68;
 
-  background: #e6f8ee;
+  background:
+    linear-gradient(
+      180deg,
+      #dff7e8,
+      #bcebcf
+    );
 
-  color: #167541;
+  color: #126b39;
+
+  box-shadow:
+    0 5px 0 #319458;
 }
 
 
 /* ========================================
-   RISPOSTA SBAGLIATA
+   RISPOSTA ERRATA
    ======================================== */
 
 .option-button.wrong {
-  border-color: #e85e65;
+  border-color: #e76363;
 
-  background: #fff0f0;
+  background:
+    linear-gradient(
+      180deg,
+      #ffe3e3,
+      #ffcaca
+    );
 
-  color: #bd3038;
+  color: #ac3232;
+
+  box-shadow:
+    0 5px 0 #c94e4e;
 }
 
-
-/* Mantiene leggibili i pulsanti disabilitati */
 
 .option-button:disabled {
   cursor: default;
@@ -320,107 +430,113 @@ body {
    ======================================== */
 
 .feedback {
-  margin-top: 16px;
+  margin-top: 12px;
 
-  padding-top: 8px;
+  padding-top: 5px;
 
   animation: feedbackAppear 0.25s ease;
 }
 
-.feedback-icon,
-.celebration {
-  font-size: 3.2rem;
+.feedback-icon {
+  margin-bottom: 6px;
+
+  font-size: 3.4rem;
 
   line-height: 1;
 
-  margin-bottom: 8px;
+  animation: pop 0.35s ease;
 }
 
 .feedback-correct {
-  color: #169052;
+  color: #21884d;
 
-  font-size: 1.65rem;
+  font-size: 1.7rem;
 
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .feedback-wrong {
-  color: #d34d55;
+  color: #c94c4c;
 
-  font-size: 1.65rem;
+  font-size: 1.6rem;
 
-  font-weight: 800;
+  font-weight: 900;
 }
 
 
 /* ========================================
-   PAROLA CORRETTA MOSTRATA DOPO RISPOSTA
+   PAROLA CORRETTA
    ======================================== */
 
 .correct-word {
-  margin: 12px 0 20px;
+  margin: 10px 0 18px;
 
-  color: #263552;
+  color: #383838;
 
-  font-size: clamp(2rem, 7vw, 3rem);
+  font-size: clamp(2rem, 6vw, 3rem);
 
-  font-weight: 800;
+  font-weight: 900;
 
   overflow-wrap: anywhere;
 }
 
 
 /* ========================================
-   PULSANTE AVANTI / GIOCA ANCORA
+   AVANTI / GIOCA ANCORA
    ======================================== */
 
 .next-button {
   width: 100%;
-
   max-width: 330px;
 
   min-height: 62px;
 
-  padding: 14px 24px;
+  padding: 14px 22px;
 
   border: 0;
-
-  border-radius: 18px;
+  border-radius: 20px;
 
   background:
     linear-gradient(
-      135deg,
-      #536ee8,
-      #7159dc
+      180deg,
+      #ffcf36,
+      #f4ae22
     );
 
-  color: white;
+  color: #3a3017;
 
   font-family: inherit;
 
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 
-  font-weight: 800;
+  font-weight: 900;
 
   cursor: pointer;
 
   box-shadow:
-    0 7px 16px rgba(83, 87, 202, 0.25);
+    0 6px 0 #cf8d13;
 
   transition:
     transform 0.12s ease,
     box-shadow 0.12s ease;
 }
 
-.next-button:hover {
-  transform: translateY(-2px);
 
-  box-shadow:
-    0 9px 20px rgba(83, 87, 202, 0.3);
+.next-button:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #ffd94f,
+      #f7b72e
+    );
 }
 
+
 .next-button:active {
-  transform: scale(0.98);
+  transform: translateY(4px);
+
+  box-shadow:
+    0 2px 0 #cf8d13;
 }
 
 
@@ -428,30 +544,46 @@ body {
    SCHERMATA FINALE
    ======================================== */
 
-.final-text {
-  margin: 8px 0 22px;
+.celebration {
+  margin-top: 10px;
+  margin-bottom: 8px;
 
-  color: #65738a;
+  font-size: 4.5rem;
+
+  line-height: 1;
+
+  animation: finalCelebration 0.55s ease;
+}
+
+.final-text {
+  margin: 10px 0 22px;
+
+  color: #665e4f;
 
   font-size: 1.2rem;
+
+  font-weight: 600;
 
   line-height: 1.5;
 }
 
 .final-score {
-  display: inline-block;
+  display: block;
 
-  margin: 4px 0 28px;
+  width: fit-content;
 
-  padding: 14px 28px;
+  margin: 5px auto 28px;
 
-  border-radius: 20px;
+  padding: 13px 28px;
 
-  background: #f2f5ff;
+  border: 3px solid #ffd249;
+  border-radius: 22px;
 
-  color: #445adb;
+  background: #fff7c7;
 
-  font-size: clamp(2.2rem, 8vw, 3.5rem);
+  color: #594613;
+
+  font-size: clamp(2.3rem, 8vw, 3.6rem);
 
   font-weight: 900;
 }
@@ -476,27 +608,68 @@ body {
 }
 
 
+@keyframes pop {
+
+  0% {
+    transform: scale(0.6);
+  }
+
+  70% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes finalCelebration {
+
+  0% {
+    transform: scale(0.5) rotate(-10deg);
+  }
+
+  60% {
+    transform: scale(1.2) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+}
+
+
 /* ========================================
-   TABLET E SCHERMI MEDI
+   TABLET
    ======================================== */
 
 @media (max-width: 700px) {
 
   .app {
-    padding: 16px;
+    padding: 14px;
   }
 
   .card {
-    padding: 24px 18px;
+    padding: 22px 18px 26px;
 
-    border-radius: 24px;
+    border-radius: 25px;
+  }
+
+  .image-container {
+    min-height: 130px;
+  }
+
+  .exercise-image {
+    max-height: 190px;
   }
 
   .option-button {
     flex-basis: calc(50% - 10px);
 
     min-width: 120px;
-
     max-width: none;
   }
 
@@ -510,39 +683,74 @@ body {
 @media (max-width: 430px) {
 
   .app {
-    padding: 10px;
+    padding: 8px;
+
     align-items: flex-start;
   }
 
   .card {
-    margin-top: 10px;
+    margin-top: 7px;
 
-    padding: 20px 14px;
+    padding: 17px 12px 22px;
 
-    border-radius: 22px;
+    border-width: 3px;
+    border-radius: 21px;
+
+    box-shadow:
+      0 6px 0 #e9bd29,
+      0 12px 25px rgba(80, 62, 10, 0.13);
+  }
+
+  .sound-button {
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.25rem;
   }
 
   .progress-bar {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
+  }
+
+  .title,
+  .card h1 {
+    margin-bottom: 10px;
+  }
+
+  .image-container {
+    min-height: 105px;
+
+    margin-bottom: 8px;
+  }
+
+  .exercise-image {
+    max-width: 230px;
+    max-height: 155px;
+
+    border-radius: 16px;
+  }
+
+  .instruction {
+    margin-top: 6px;
   }
 
   .word {
-    margin-top: 12px;
-    margin-bottom: 20px;
+    margin: 5px auto 16px;
 
-    padding: 10px;
+    padding: 7px;
   }
 
   .options {
     gap: 10px;
+
+    margin-bottom: 16px;
   }
 
   .option-button {
     flex-basis: calc(50% - 6px);
 
     min-width: 0;
-
-    min-height: 66px;
+    min-height: 64px;
 
     padding: 10px;
 
@@ -550,7 +758,7 @@ body {
   }
 
   .feedback-icon {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 
 }
@@ -570,6 +778,16 @@ body {
 
 
 /* ========================================
-   ACCESSIBILITA':
-   riduce le animazioni se richiesto
-   ===============================
+   RIDUZIONE ANIMAZIONI
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+}
