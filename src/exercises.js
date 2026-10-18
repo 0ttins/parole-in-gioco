@@ -512,7 +512,7 @@ export const exercises = [
     type: "correctWord",
     category: "CORRECT_WORD",
     prompt: "Quale parola è scritta bene?",
-    options: ["ciocolato", "cioccolato", "coccolato"],
+    options: ["ciocolato", "cioccolato", "cocciolato"],
     answer: "cioccolato",
     word: "cioccolato",
     image: "/images/cioccolato.svg"
