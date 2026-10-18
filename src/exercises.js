@@ -41,7 +41,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CHI",
     word: "chiave",
-    image: "/images/chiave.webp"
+    image: "/images/chiave.svg"
   },
   {
     id: "cichi-02",
@@ -51,7 +51,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CHI",
     word: "chiesa",
-    image: "/images/chiesa.webp"
+    image: "/images/chiesa.svg"
   },
   {
     id: "cichi-03",
@@ -61,7 +61,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CHI",
     word: "chiodo",
-    image: "/images/chiodo.webp"
+    image: "/images/chiodo.svg"
   },
   {
     id: "cichi-04",
@@ -71,7 +71,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CHI",
     word: "chiuso",
-    image: null
+    image: "/images/chiuso.svg"
   },
   {
     id: "cichi-05",
@@ -81,7 +81,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CHI",
     word: "chitarra",
-    image: "/images/chitarra.webp"
+    image: "/images/chitarra.svg"
   },
   {
     id: "cichi-06",
@@ -91,7 +91,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CI",
     word: "cibo",
-    image: "/images/cibo.webp"
+    image: "/images/cibo.svg"
   },
   {
     id: "cichi-07",
@@ -101,7 +101,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CI",
     word: "cima",
-    image: "/images/cima.webp"
+    image: "/images/cima.svg"
   },
   {
     id: "cichi-08",
@@ -111,7 +111,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CI",
     word: "cinema",
-    image: "/images/cinema.webp"
+    image: "/images/cinema.svg"
   },
   {
     id: "cichi-09",
@@ -121,7 +121,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CI",
     word: "civetta",
-    image: "/images/civetta.webp"
+    image: "/images/civetta.svg"
   },
   {
     id: "cichi-10",
@@ -131,7 +131,7 @@ export const exercises = [
     options: ["CI", "CHI"],
     answer: "CI",
     word: "cipolla",
-    image: "/images/cipolla.webp"
+    image: "/images/cipolla.svg"
   },
 
 
@@ -147,7 +147,7 @@ export const exercises = [
     options: ["GI", "GHI"],
     answer: "GHI",
     word: "ghianda",
-    image: "/images/ghianda.webp"
+    image: "/images/ghianda.svg"
   },
   {
     id: "gighi-02",
@@ -157,7 +157,7 @@ export const exercises = [
     options: ["GI", "GHI"],
     answer: "GI",
     word: "gioco",
-    image: "/images/gioco.webp"
+    image: "/images/gioco.svg"
   },
   {
     id: "gighi-03",
@@ -167,7 +167,7 @@ export const exercises = [
     options: ["GI", "GHI"],
     answer: "GI",
     word: "giostra",
-    image: "/images/giostra.webp"
+    image: "/images/giostra.svg"
   },
   {
     id: "gighi-04",
@@ -177,7 +177,7 @@ export const exercises = [
     options: ["GI", "GHI"],
     answer: "GI",
     word: "girasole",
-    image: "/images/girasole.webp"
+    image: "/images/girasole.svg"
   },
   {
     id: "gighi-05",
@@ -187,7 +187,7 @@ export const exercises = [
     options: ["GI", "GHI"],
     answer: "GI",
     word: "ginocchio",
-    image: "/images/ginocchio.webp"
+    image: "/images/ginocchio.svg"
   },
   {
     id: "gighi-06",
@@ -197,7 +197,7 @@ export const exercises = [
     options: ["GI", "GHI"],
     answer: "GI",
     word: "giglio",
-    image: "/images/giglio.webp"
+    image: "/images/giglio.svg"
   },
   {
     id: "gighi-07",
@@ -223,7 +223,7 @@ export const exercises = [
     options: ["CA", "CIA"],
     answer: "CA",
     word: "cane",
-    image: "/images/cane.webp"
+    image: "/images/cane.svg"
   },
   {
     id: "cacia-02",
@@ -233,7 +233,7 @@ export const exercises = [
     options: ["CA", "CIA"],
     answer: "CA",
     word: "casa",
-    image: "/images/casa.webp"
+    image: "/images/casa.svg"
   },
   {
     id: "cacia-03",
@@ -243,7 +243,7 @@ export const exercises = [
     options: ["CA", "CIA"],
     answer: "CA",
     word: "camicia",
-    image: "/images/camicia.webp"
+    image: "/images/camicia.svg"
   },
   {
     id: "cacia-04",
@@ -253,7 +253,7 @@ export const exercises = [
     options: ["CA", "CIA"],
     answer: "CA",
     word: "capello",
-    image: "/images/capello.webp"
+    image: "/images/capello.svg"
   },
   {
     id: "cacia-05",
@@ -273,7 +273,7 @@ export const exercises = [
     options: ["CA", "CIA"],
     answer: "CIA",
     word: "ciabatta",
-    image: "/images/ciabatta.webp"
+    image: "/images/ciabatta.svg"
   },
 
 
@@ -289,7 +289,7 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CO",
     word: "coda",
-    image: "/images/coda.webp"
+    image: "/images/coda.svg"
   },
   {
     id: "cocio-02",
@@ -299,7 +299,7 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CO",
     word: "corona",
-    image: "/images/corona.webp"
+    image: "/images/corona.svg"
   },
   {
     id: "cocio-03",
@@ -309,7 +309,7 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CO",
     word: "colore",
-    image: "/images/colore.webp"
+    image: "/images/colore.svg"
   },
   {
     id: "cocio-04",
@@ -319,7 +319,7 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CO",
     word: "collina",
-    image: "/images/collina.webp"
+    image: "/images/collina.svg"
   },
   {
     id: "cocio-05",
@@ -329,7 +329,7 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CO",
     word: "cioccolato",
-    image: "/images/cioccolato.webp"
+    image: "/images/cioccolato.svg"
   },
   {
     id: "cocio-06",
@@ -339,7 +339,7 @@ export const exercises = [
     options: ["CO", "CIO"],
     answer: "CIO",
     word: "ciotola",
-    image: "/images/ciotola.webp"
+    image: "/images/ciotola.svg"
   },
 
 
@@ -355,7 +355,7 @@ export const exercises = [
     options: ["CU", "CIU"],
     answer: "CU",
     word: "cubo",
-    image: "/images/cubo.webp"
+    image: "/images/cubo.svg"
   },
   {
     id: "cuciu-02",
@@ -365,7 +365,7 @@ export const exercises = [
     options: ["CU", "CIU"],
     answer: "CU",
     word: "culla",
-    image: "/images/culla.webp"
+    image: "/images/culla.svg"
   },
   {
     id: "cuciu-03",
@@ -375,7 +375,7 @@ export const exercises = [
     options: ["CU", "CIU"],
     answer: "CU",
     word: "cucina",
-    image: "/images/cucina.webp"
+    image: "/images/cucina.svg"
   },
   {
     id: "cuciu-04",
@@ -385,7 +385,7 @@ export const exercises = [
     options: ["CU", "CIU"],
     answer: "CIU",
     word: "ciuffo",
-    image: "/images/ciuffo.webp"
+    image: "/images/ciuffo.svg"
   },
   {
     id: "cuciu-05",
@@ -395,7 +395,7 @@ export const exercises = [
     options: ["CU", "CIU"],
     answer: "CIU",
     word: "ciuccio",
-    image: "/images/ciuccio.webp"
+    image: "/images/ciuccio.svg"
   },
 
 
@@ -411,7 +411,7 @@ export const exercises = [
     options: ["CE", "CIE"],
     answer: "CE",
     word: "cera",
-    image: "/images/cera.webp"
+    image: "/images/cera.svg"
   },
   {
     id: "cecie-02",
@@ -421,7 +421,7 @@ export const exercises = [
     options: ["CE", "CIE"],
     answer: "CE",
     word: "cena",
-    image: "/images/cena.webp"
+    image: "/images/cena.svg"
   },
   {
     id: "cecie-03",
@@ -431,7 +431,7 @@ export const exercises = [
     options: ["CE", "CIE"],
     answer: "CE",
     word: "cesto",
-    image: "/images/cesto.webp"
+    image: "/images/cesto.svg"
   },
   {
     id: "cecie-04",
@@ -441,7 +441,7 @@ export const exercises = [
     options: ["CE", "CIE"],
     answer: "CE",
     word: "cerchio",
-    image: "/images/cerchio.webp"
+    image: "/images/cerchio.svg"
   },
   {
     id: "cecie-05",
@@ -451,7 +451,7 @@ export const exercises = [
     options: ["CE", "CIE"],
     answer: "CIE",
     word: "cielo",
-    image: "/images/cielo.webp"
+    image: "/images/cielo.svg"
   },
   {
     id: "cecie-06",
@@ -475,7 +475,7 @@ export const exercises = [
     options: ["ciave", "chiave", "chiaave"],
     answer: "chiave",
     word: "chiave",
-    image: "/images/chiave.webp"
+    image: "/images/chiave.svg"
   },
   {
     id: "correct-02",
@@ -485,7 +485,7 @@ export const exercises = [
     options: ["ciesa", "chiesa", "chesa"],
     answer: "chiesa",
     word: "chiesa",
-    image: "/images/chiesa.webp"
+    image: "/images/chiesa.svg"
   },
   {
     id: "correct-03",
@@ -495,7 +495,7 @@ export const exercises = [
     options: ["giaccio", "ghiaccio", "ghiachio"],
     answer: "ghiaccio",
     word: "ghiaccio",
-    image: "/images/ghiaccio.webp"
+    image: "/images/ghiaccio.svg"
   },
   {
     id: "correct-04",
@@ -505,7 +505,7 @@ export const exercises = [
     options: ["ghioco", "gioco", "giocco"],
     answer: "gioco",
     word: "gioco",
-    image: "/images/gioco.webp"
+    image: "/images/gioco.svg"
   },
   {
     id: "correct-05",
@@ -515,7 +515,7 @@ export const exercises = [
     options: ["ciocolato", "cioccolato", "coccolato"],
     answer: "cioccolato",
     word: "cioccolato",
-    image: "/images/cioccolato.webp"
+    image: "/images/cioccolato.svg"
   },
   {
     id: "correct-06",
@@ -525,7 +525,7 @@ export const exercises = [
     options: ["celo", "cielo", "ciello"],
     answer: "cielo",
     word: "cielo",
-    image: "/images/cielo.webp"
+    image: "/images/cielo.svg"
   },
   {
     id: "correct-07",
@@ -535,7 +535,7 @@ export const exercises = [
     options: ["cuffo", "ciuffo", "ciufo"],
     answer: "ciuffo",
     word: "ciuffo",
-    image: "/images/ciuffo.webp"
+    image: "/images/ciuffo.svg"
   },
   {
     id: "correct-08",
@@ -545,7 +545,7 @@ export const exercises = [
     options: ["ciucina", "cucina", "cuchina"],
     answer: "cucina",
     word: "cucina",
-    image: "/images/cucina.webp"
+    image: "/images/cucina.svg"
   },
 
 
@@ -561,7 +561,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "f",
     word: "fiume",
-    image: "/images/fiume.webp"
+    image: "/images/fiume.svg"
   },
   {
     id: "ftv-02",
@@ -571,7 +571,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "f",
     word: "filo",
-    image: "/images/filo.webp"
+    image: "/images/filo.svg"
   },
   {
     id: "ftv-03",
@@ -581,7 +581,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "f",
     word: "foca",
-    image: "/images/foca.webp"
+    image: "/images/foca.svg"
   },
   {
     id: "ftv-04",
@@ -591,7 +591,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "t",
     word: "tigre",
-    image: "/images/tigre.webp"
+    image: "/images/tigre.svg"
   },
   {
     id: "ftv-05",
@@ -601,7 +601,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "v",
     word: "volpe",
-    image: "/images/volpe.webp"
+    image: "/images/volpe.svg"
   },
   {
     id: "ftv-06",
@@ -611,7 +611,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "v",
     word: "vaso",
-    image: "/images/vaso.webp"
+    image: "/images/vaso.svg"
   },
   {
     id: "ftv-07",
@@ -621,7 +621,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "t",
     word: "topo",
-    image: "/images/topo.webp"
+    image: "/images/topo.svg"
   },
   {
     id: "ftv-08",
@@ -631,7 +631,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "f",
     word: "farfalla",
-    image: "/images/farfalla.webp"
+    image: "/images/farfalla.svg"
   },
   {
     id: "ftv-09",
@@ -641,7 +641,7 @@ export const exercises = [
     options: ["f", "t", "v"],
     answer: "t",
     word: "tetto",
-    image: "/images/tetto.webp"
+    image: "/images/tetto.svg"
   },
 
 
@@ -657,7 +657,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "p",
     word: "piuma",
-    image: "/images/piuma.webp"
+    image: "/images/piuma.svg"
   },
   {
     id: "pqbd-02",
@@ -667,7 +667,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "p",
     word: "pane",
-    image: "/images/pane.webp"
+    image: "/images/pane.svg"
   },
   {
     id: "pqbd-03",
@@ -677,7 +677,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "p",
     word: "pera",
-    image: "/images/pera.webp"
+    image: "/images/pera.svg"
   },
   {
     id: "pqbd-04",
@@ -687,7 +687,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "p",
     word: "ponte",
-    image: "/images/ponte.webp"
+    image: "/images/ponte.svg"
   },
   {
     id: "pqbd-05",
@@ -697,7 +697,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "p",
     word: "parco",
-    image: "/images/parco.webp"
+    image: "/images/parco.svg"
   },
   {
     id: "pqbd-06",
@@ -707,7 +707,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "b",
     word: "balena",
-    image: "/images/balena.webp"
+    image: "/images/balena.svg"
   },
   {
     id: "pqbd-07",
@@ -717,7 +717,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "b",
     word: "borsa",
-    image: "/images/borsa.webp"
+    image: "/images/borsa.svg"
   },
   {
     id: "pqbd-08",
@@ -727,7 +727,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "b",
     word: "buco",
-    image: "/images/buco.webp"
+    image: "/images/buco.svg"
   },
   {
     id: "pqbd-09",
@@ -737,7 +737,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "d",
     word: "dente",
-    image: "/images/dente.webp"
+    image: "/images/dente.svg"
   },
   {
     id: "pqbd-10",
@@ -747,7 +747,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "d",
     word: "dado",
-    image: "/images/dado.webp"
+    image: "/images/dado.svg"
   },
   {
     id: "pqbd-11",
@@ -757,7 +757,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "d",
     word: "dito",
-    image: "/images/dito.webp"
+    image: "/images/dito.svg"
   },
   {
     id: "pqbd-12",
@@ -767,7 +767,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "d",
     word: "delfino",
-    image: "/images/delfino.webp"
+    image: "/images/delfino.svg"
   },
   {
     id: "pqbd-13",
@@ -777,7 +777,7 @@ export const exercises = [
     options: ["p", "q", "b", "d"],
     answer: "q",
     word: "quadro",
-    image: "/images/quadro.webp"
+    image: "/images/quadro.svg"
   },
   {
     id: "pqbd-14",
@@ -803,7 +803,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "pigna",
-    image: "/images/pigna.webp"
+    image: "/images/pigna.svg"
   },
   {
     id: "gnni-02",
@@ -813,7 +813,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "spugna",
-    image: "/images/spugna.webp"
+    image: "/images/spugna.svg"
   },
   {
     id: "gnni-03",
@@ -823,7 +823,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "lavagna",
-    image: "/images/lavagna.webp"
+    image: "/images/lavagna.svg"
   },
   {
     id: "gnni-04",
@@ -833,7 +833,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "pugno",
-    image: "/images/pugno.webp"
+    image: "/images/pugno.svg"
   },
   {
     id: "gnni-05",
@@ -843,7 +843,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "legno",
-    image: "/images/legno.webp"
+    image: "/images/legno.svg"
   },
   {
     id: "gnni-06",
@@ -863,7 +863,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "bagno",
-    image: "/images/bagno.webp"
+    image: "/images/bagno.svg"
   },
   {
     id: "gnni-08",
@@ -873,7 +873,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "gn",
     word: "ragno",
-    image: "/images/ragno.webp"
+    image: "/images/ragno.svg"
   },
   {
     id: "gnni-09",
@@ -893,7 +893,7 @@ export const exercises = [
     options: ["gn", "ni"],
     answer: "ni",
     word: "paniere",
-    image: "/images/paniere.webp"
+    image: "/images/paniere.svg"
   }
 
 ];
